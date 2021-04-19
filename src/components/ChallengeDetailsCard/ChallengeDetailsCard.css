@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.26);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  flex-grow: 1;
+}
+.card:focus,
+.card:hover {
+  box-shadow: 0 13px 23px rgba(0, 0, 0, 0.12), 0 15px 24px rgba(0, 0, 0, 0.26);
+}
+.card-name {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+}
+.card-value {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+}

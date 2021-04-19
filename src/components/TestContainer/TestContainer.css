@@ -1,0 +1,11 @@
+.test-container {
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  min-height: 550px;
+}
+.try-again-section {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}

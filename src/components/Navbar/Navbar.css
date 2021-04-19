@@ -1,0 +1,25 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  background-color: #1d2020;
+  box-shadow: 0 1px 3px rgba(105, 90, 90, 0.12), 0 2px 4px rgba(0, 0, 0, 0.26);
+  z-index: 99;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.flash-logo {
+  height: 40px;
+  margin-left: 20px;
+}
+.flash-logo-text {
+  font-family: "bangers", cursive;
+  font-size: 60px;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  color: #e7e2e7;
+}
+
