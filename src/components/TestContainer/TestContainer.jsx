@@ -3,8 +3,7 @@ import TryAgain from "../TryAgain/TryAgain";
 import TypingChallenge from "../TypingChallenge/TypingChallenge";
 import "./TestContainer.css";
 
-const serviceUrl =
-  "https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=text";
+const serviceUrl = "http://www.metaphorpsum.com/paragraphs/1/9";
 const totalTime = 60;
 
 const TestContainer = () => {
