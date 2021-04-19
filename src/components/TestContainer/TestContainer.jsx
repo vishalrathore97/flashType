@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import TryAgain from "../TryAgain/TryAgain";
 import TypingChallenge from "../TypingChallenge/TypingChallenge";
+import { SAMPLE_PARAGRAPHS } from "./../../data/samplePara";
 import "./TestContainer.css";
 
-const serviceUrl = "http://www.metaphorpsum.com/paragraphs/1/9";
 const totalTime = 60;
 
 const TestContainer = () => {
@@ -18,16 +18,14 @@ const TestContainer = () => {
 
   useEffect(() => {
     if (selectedPara === "hi") {
-      fetch(serviceUrl)
-        .then((para) => para.text())
-        .then((info) => {
-          const letterArr = info.split("");
-          const testInfo = letterArr.map((l) => {
-            return { testLetter: l, status: "notAttempted" };
-          });
-          setSelectedPara(info);
-          setTestInfo(testInfo);
-        });
+      const randomPara =
+        SAMPLE_PARAGRAPHS[Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)];
+      const letterArr = randomPara.split("");
+      const testInfo = letterArr.map((l) => {
+        return { testLetter: l, status: "notAttempted" };
+      });
+      setSelectedPara(randomPara);
+      setTestInfo(testInfo);
     }
     let timer;
     if (timerStarted) {
@@ -96,16 +94,14 @@ const TestContainer = () => {
   };
 
   const fetchNewPara = () => {
-    fetch(serviceUrl)
-      .then((para) => para.text())
-      .then((info) => {
-        const letterArr = info.split("");
-        const testInfo = letterArr.map((l) => {
-          return { testLetter: l, status: "notAttempted" };
-        });
-        setSelectedPara(info);
-        setTestInfo(testInfo);
-      });
+    const randomPara =
+      SAMPLE_PARAGRAPHS[Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)];
+    const letterArr = randomPara.split("");
+    const testInfo = letterArr.map((l) => {
+      return { testLetter: l, status: "notAttempted" };
+    });
+    setSelectedPara(randomPara);
+    setTestInfo(testInfo);
   };
 
   return (
